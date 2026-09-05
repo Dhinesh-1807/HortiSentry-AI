@@ -1,0 +1,42 @@
+# HortiSentry Production Environment Configuration
+
+app:
+  name: "HortiSentry"
+  title: "HortiSentry — AI-Powered Horticultural Disease Observation and Expert Escalation System"
+  environment: "production"
+  debug: false
+  log_level: "INFO"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  cors_origins:
+    - "http://localhost:5173"
+    - "http://localhost:3000"
+    - "https://hortisentry.org"
+
+database:
+  url: "sqlite:///./hortisentry_prod.db"
+  echo_sql: false
+
+ml:
+  mode: "REAL"
+  model_name: "tomato-v1"
+  model_path: "ml/artifacts/tomato_v1.pt"
+  architecture: "mobilenet_v3_small"
+  confidence_threshold: 0.70
+  num_classes: 4
+
+storage:
+  upload_dir: "uploads"
+  max_upload_size_mb: 10
+  allowed_extensions:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".webp"
+
+escalation:
+  auto_escalate_low_confidence: true
+  auto_escalate_poor_quality: true

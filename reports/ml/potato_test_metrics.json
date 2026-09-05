@@ -1,0 +1,54 @@
+{
+  "model_version": "potato-v1",
+  "dataset_version": "potato-v1.1-dataset",
+  "test_samples": 379,
+  "accuracy": 0.9683,
+  "accuracy_percentage": 96.83,
+  "macro_metrics": {
+    "precision": 0.9724,
+    "recall": 0.9752,
+    "f1_score": 0.9733
+  },
+  "weighted_metrics": {
+    "precision": 0.9694,
+    "recall": 0.9683,
+    "f1_score": 0.9683
+  },
+  "per_class": {
+    "Potato_Healthy": {
+      "precision": 0.9792,
+      "recall": 1.0,
+      "f1_score": 0.9895,
+      "support": 47
+    },
+    "Potato_Early_Blight": {
+      "precision": 0.9933,
+      "recall": 0.9371,
+      "f1_score": 0.9644,
+      "support": 159
+    },
+    "Potato_Late_Blight": {
+      "precision": 0.9448,
+      "recall": 0.9884,
+      "f1_score": 0.9661,
+      "support": 173
+    }
+  },
+  "confusion_matrix": [
+    [
+      47,
+      0,
+      0
+    ],
+    [
+      0,
+      149,
+      10
+    ],
+    [
+      1,
+      1,
+      171
+    ]
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "HortiSentry Horticultural Image Dataset Quality Report",
+  "generated_at": "2026-09-05T08:37:00.192815Z",
+  "total_images": 6271,
+  "splits": {
+    "train": 4386,
+    "test": 947,
+    "validation": 938
+  },
+  "crop_distribution": {
+    "Tomato": 6271
+  },
+  "class_distribution": {
+    "Early_Blight": 1000,
+    "Healthy": 1591,
+    "Late_Blight": 1909,
+    "Septoria_Leaf_Spot": 1771
+  },
+  "healthy_vs_disease": {
+    "healthy": 1591,
+    "diseased": 4680,
+    "healthy_percentage": 25.37
+  },
+  "region_distribution": {
+    "Karnataka": 1255,
+    "Maharashtra": 1254,
+    "Andhra_Pradesh": 1254,
+    "Punjab": 1254,
+    "Tamil_Nadu": 1254
+  },
+  "resolution_statistics": {
+    "standard_resolution": "256x256",
+    "channels": 3,
+    "color_space": "RGB",
+    "formats": [
+      "JPEG",
+      "PNG",
+      "WEBP"
+    ]
+  },
+  "data_quality_audit": {
+    "missing_values": 0,
+    "corrupted_images_detected": 0,
+    "exact_duplicates_purged": 24,
+    "near_duplicates_identified": 18,
+    "average_quality_score": 0.92,
+    "privacy_compliance": "100% Non-identifiable. Zero farmer faces, IDs, or private data present."
+  }
+}

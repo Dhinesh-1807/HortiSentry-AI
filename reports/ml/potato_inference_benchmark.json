@@ -1,0 +1,10 @@
+{
+  "model_version": "potato-v1",
+  "device": "cpu",
+  "benchmark_samples": 100,
+  "mean_latency_ms": 10.04,
+  "median_latency_ms": 10.55,
+  "min_latency_ms": 6.75,
+  "max_latency_ms": 19.23,
+  "throughput_images_per_sec": 99.57
+}

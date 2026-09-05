@@ -1,0 +1,35 @@
+{
+  "artifact_path": "ml\\artifacts\\potato_v1.pt",
+  "model_version": "potato-v1",
+  "architecture": "mobilenet_v3_small",
+  "dataset_version": "potato-v1.1-dataset",
+  "num_classes": 3,
+  "classes": [
+    "Potato_Healthy",
+    "Potato_Early_Blight",
+    "Potato_Late_Blight"
+  ],
+  "class_to_idx": {
+    "Potato_Healthy": 0,
+    "Potato_Early_Blight": 1,
+    "Potato_Late_Blight": 2
+  },
+  "output_dimension": 3,
+  "image_size": 224,
+  "file_size_bytes": 6219403,
+  "file_size_mb": 5.93,
+  "sha256": "24344f4823560303c41af95d8209b3fa7ab74c720e69ad1f5ca9b6d60b29ab77",
+  "reload_test": "PASSED",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  }
+}

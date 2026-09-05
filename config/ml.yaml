@@ -1,0 +1,39 @@
+crop: tomato
+
+classes:
+  - Healthy
+  - Early_Blight
+  - Late_Blight
+  - Septoria_Leaf_Spot
+
+image_size: 224
+
+model:
+  architecture: mobilenet_v3_small
+  pretrained: true
+  num_classes: 4
+
+training:
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  random_seed: 42
+
+early_stopping:
+  enabled: true
+  patience: 3
+  monitor: val_loss
+  mode: min
+
+scheduler:
+  enabled: true
+  factor: 0.5
+  patience: 2
+  min_lr: 1e-6
+
+class_imbalance:
+  strategy: CLASS_WEIGHTED_LOSS
+
+device:
+  auto: true

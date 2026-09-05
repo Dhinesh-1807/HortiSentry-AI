@@ -1,0 +1,42 @@
+{
+  "total_scenarios": 4,
+  "scenarios": [
+    {
+      "scenario_name": "Real Model Inference",
+      "status": "PASSED",
+      "details": {
+        "model_version": "tomato-v1",
+        "predicted_class": "Healthy",
+        "confidence": 0.9998,
+        "is_demo_mode": false,
+        "latency_ms": 64.97
+      }
+    },
+    {
+      "scenario_name": "Expert Decision Preservation",
+      "status": "PASSED",
+      "details": {
+        "ai_original_prediction": "Healthy",
+        "expert_override_prediction": "Early Blight (Alternaria solani)",
+        "preserved_independently": true
+      }
+    },
+    {
+      "scenario_name": "Security & Path Traversal Protection",
+      "status": "PASSED",
+      "details": {
+        "attempted_filename": "../../malicious_path.jpg",
+        "file_written_outside": false,
+        "protection_active": true
+      }
+    },
+    {
+      "scenario_name": "Dual-Mode Switchability (REAL vs DEMO)",
+      "status": "PASSED",
+      "details": {
+        "demo_mode_inference_flag": true,
+        "switchability_verified": true
+      }
+    }
+  ]
+}

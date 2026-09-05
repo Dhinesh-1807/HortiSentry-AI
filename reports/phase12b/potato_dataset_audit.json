@@ -1,0 +1,36 @@
+{
+  "dataset_version": "potato-v1.1-dataset",
+  "total_images": 2543,
+  "healthy_count": 334,
+  "classes": {
+    "Potato_Healthy": 334,
+    "Potato_Early_Blight": 1106,
+    "Potato_Late_Blight": 1103
+  },
+  "splits": {
+    "train": 1796,
+    "validation": 368,
+    "test": 379
+  },
+  "quality_breakdown": {
+    "GOOD": 2543
+  },
+  "sources": {
+    "HortiSentry_Benchmark": 30,
+    "PlantVillage": 2152,
+    "PlantVillage_Segmented": 152,
+    "PlantDoc": 209
+  },
+  "environments": {
+    "CONTROLLED": 2334,
+    "FIELD": 209
+  },
+  "duplicates": {
+    "duplicate_groups": 4,
+    "duplicate_image_count": 8,
+    "cross_split_leakage": 0
+  },
+  "imbalance_ratio": 3.31,
+  "readiness_status": "GREEN",
+  "gate_decision": "TRAINING_READY"
+}

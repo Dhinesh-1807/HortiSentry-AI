@@ -1,0 +1,31 @@
+# HortiSentry Image Quality Audit Configuration Parameters
+# Thresholds for validating raw leaf photos prior to ML model training
+
+supported_extensions:
+  - ".jpg"
+  - ".jpeg"
+  - ".png"
+  - ".webp"
+
+dimensions:
+  min_width: 128
+  min_height: 128
+  recommended_width: 224
+  recommended_height: 224
+
+aspect_ratio:
+  min_ratio: 0.33   # width / height lower bound
+  max_ratio: 3.00   # width / height upper bound
+
+blur:
+  # Laplacian variance thresholds
+  reject_variance: 50.0   # Extremely blurry images (< 50)
+  warning_variance: 100.0 # Mildly blurry images (50 - 100)
+
+brightness:
+  # Mean pixel brightness (0 - 255)
+  too_dark: 30.0    # Severely underexposed image
+  too_bright: 225.0 # Severely overexposed image
+
+duplicate_detection:
+  perceptual_hash_threshold: 4 # Hamming distance threshold for near-duplicates (<= 4)

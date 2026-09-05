@@ -1,0 +1,15 @@
+crop,dataset_available,image_count,class_count,field_images,dedicated_model,model_status,evidence_review,recommended_next_step
+tomato,yes,6271,4,4,yes,production_benchmark,yes,maintain
+potato,yes,80,3,0,no,data_expansion_required,yes,expand dataset before model training
+pepper,yes,55,2,0,no,data_expansion_required,yes,expand dataset before model training
+apple,yes,105,4,0,no,data_expansion_required,yes,expand dataset before model training
+grape,yes,105,4,0,no,data_expansion_required,yes,expand dataset before model training
+corn,yes,105,4,0,no,data_expansion_required,yes,expand dataset before model training
+cherry,yes,55,2,0,no,data_expansion_required,yes,expand dataset before model training
+peach,yes,55,2,0,no,data_expansion_required,yes,expand dataset before model training
+strawberry,yes,55,2,0,no,data_expansion_required,yes,expand dataset before model training
+orange,yes,25,1,0,no,knowledge_review_only,yes,expand dataset / knowledge review only
+blueberry,yes,30,1,0,no,knowledge_review_only,yes,expand dataset / knowledge review only
+raspberry,yes,30,1,0,no,knowledge_review_only,yes,expand dataset / knowledge review only
+soybean,yes,30,1,0,no,knowledge_review_only,yes,expand dataset / knowledge review only
+squash,yes,25,1,0,no,knowledge_review_only,yes,expand dataset / knowledge review only

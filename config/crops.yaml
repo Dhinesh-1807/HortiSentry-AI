@@ -1,0 +1,1005 @@
+# HortiSentry Dynamic Multi-Crop Catalogue
+# 32 Horticultural Crops across Vegetables, Fruits, and Spices/Plantation
+
+# ==============================================================================
+# VEGETABLES
+# ==============================================================================
+
+tomato:
+  key: "tomato"
+  common_name: "Tomato"
+  display_name_en: "Tomato"
+  display_name_ta: "தக்காளி"
+  scientific_name: "Solanum lycopersicum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "trained_model"
+  model_id: "tomato-v1"
+  description: "Solanum lycopersicum — Active primary crop with dedicated MobileNetV3 trained PyTorch model."
+  is_active: true
+  stages:
+    - key: "SEEDLING"
+      display_name: "Seedling"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FLOWERING"
+      display_name: "Flowering"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Yellow spots"
+    - "Brown spots"
+    - "Dark lesions"
+    - "Leaf curling"
+    - "White patches"
+    - "Holes"
+    - "Wilting"
+    - "Discoloration"
+    - "Drying"
+    - "Other"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Early Blight"
+      display_name: "Early Blight"
+      scientific_name: "Alternaria solani"
+      severity: "moderate"
+    - key: "Late Blight"
+      display_name: "Late Blight"
+      scientific_name: "Phytophthora infestans"
+      severity: "high"
+    - key: "Leaf Spot"
+      display_name: "Septoria Leaf Spot"
+      scientific_name: "Septoria lycopersici"
+      severity: "moderate"
+
+potato:
+  key: "potato"
+  common_name: "Potato"
+  display_name_en: "Potato"
+  display_name_ta: "உருளைக்கிழங்கு"
+  scientific_name: "Solanum tuberosum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "trained_model"
+  model_id: "potato-v1"
+  description: "Solanum tuberosum — Active crop with dedicated MobileNetV3 Small trained PyTorch model (potato-v1)."
+  is_active: true
+  stages:
+    - key: "SPROUTING"
+      display_name: "Sprouting"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "TUBER_INITIATION"
+      display_name: "Tuber Initiation"
+    - key: "TUBER_BULKING"
+      display_name: "Tuber Bulking"
+    - key: "MATURATION"
+      display_name: "Maturation"
+  symptoms:
+    - "Brown spots"
+    - "Dark lesions"
+    - "Concentric lesions"
+    - "Water-soaked spots"
+    - "Yellowing"
+    - "Wilting"
+    - "Other"
+  disease_classes:
+    - key: "Potato_Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Potato_Early_Blight"
+      display_name: "Early Blight"
+      scientific_name: "Alternaria solani"
+      severity: "moderate"
+    - key: "Potato_Late_Blight"
+      display_name: "Late Blight"
+      scientific_name: "Phytophthora infestans"
+      severity: "high"
+
+chilli:
+  key: "chilli"
+  common_name: "Chilli / Pepper"
+  display_name_en: "Chilli"
+  display_name_ta: "மிளகாய்"
+  scientific_name: "Capsicum annuum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Capsicum annuum — Supported via AI visual assessment and ICAR/TNAU evidence engine."
+  is_active: true
+  stages:
+    - key: "SEEDLING"
+      display_name: "Seedling"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FLOWERING"
+      display_name: "Flowering"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Leaf curling"
+    - "Fruit rot / Anthracnose"
+    - "Yellowing"
+    - "Powdery white growth"
+    - "Wilting"
+    - "Stunted growth"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Chilli Leaf Curl Virus"
+      display_name: "Chilli Leaf Curl Virus (Begomovirus)"
+      scientific_name: "Chilli leaf curl virus"
+      severity: "high"
+    - key: "Anthracnose Fruit Rot"
+      display_name: "Anthracnose Fruit Rot"
+      scientific_name: "Colletotrichum capsici"
+      severity: "high"
+    - key: "Powdery Mildew"
+      display_name: "Powdery Mildew"
+      scientific_name: "Leveillula taurica"
+      severity: "moderate"
+
+brinjal:
+  key: "brinjal"
+  common_name: "Brinjal / Eggplant"
+  display_name_en: "Brinjal"
+  display_name_ta: "கத்தரிக்காய்"
+  scientific_name: "Solanum melongena"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Solanum melongena — Supported via AI visual assessment and ICAR/TNAU evidence engine."
+  is_active: true
+  stages:
+    - key: "SEEDLING"
+      display_name: "Seedling"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FLOWERING"
+      display_name: "Flowering"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Little leaf / bushy appearance"
+    - "Shoot blight / Fruit rot"
+    - "Yellowing & wilting"
+    - "Leaf spots"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Little Leaf Disease"
+      display_name: "Little Leaf Disease (Phytoplasma)"
+      scientific_name: "Candidatus Phytoplasma"
+      severity: "high"
+    - key: "Phomopsis Blight"
+      display_name: "Phomopsis Blight and Fruit Rot"
+      scientific_name: "Phomopsis vexans"
+      severity: "high"
+
+potato:
+  key: "potato"
+  common_name: "Potato"
+  display_name_en: "Potato"
+  display_name_ta: "உருளைக்கிழங்கு"
+  scientific_name: "Solanum tuberosum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Solanum tuberosum — Supported via AI visual assessment and evidence review."
+  is_active: true
+  stages:
+    - key: "SPROUTING"
+      display_name: "Sprouting"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "TUBER_INITIATION"
+      display_name: "Tuber Initiation"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Brown concentric leaf spots"
+    - "Water-soaked dark lesions"
+    - "Tuber rot"
+    - "Leaf curling"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Potato Early Blight"
+      display_name: "Potato Early Blight"
+      scientific_name: "Alternaria solani"
+      severity: "moderate"
+    - key: "Potato Late Blight"
+      display_name: "Potato Late Blight"
+      scientific_name: "Phytophthora infestans"
+      severity: "high"
+
+onion:
+  key: "onion"
+  common_name: "Onion"
+  display_name_en: "Onion"
+  display_name_ta: "வெங்காயம்"
+  scientific_name: "Allium cepa"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Allium cepa — Supported via AI visual assessment and evidence review."
+  is_active: true
+  stages:
+    - key: "SEEDLING"
+      display_name: "Seedling"
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "BULB_DEVELOPMENT"
+      display_name: "Bulb Development"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Purple blotch on leaves"
+    - "Downy white growth"
+    - "Tip drying"
+    - "Bulb rot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Purple Blotch"
+      display_name: "Purple Blotch"
+      scientific_name: "Alternaria porri"
+      severity: "high"
+
+okra:
+  key: "okra"
+  common_name: "Okra / Lady Finger"
+  display_name_en: "Okra"
+  display_name_ta: "வெண்டி"
+  scientific_name: "Abelmoschus esculentus"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Abelmoschus esculentus — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FLOWERING"
+      display_name: "Flowering"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Yellow vein network"
+    - "Powdery leaf patches"
+    - "Stunted growth"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+      scientific_name: "N/A"
+      severity: "low"
+    - key: "Yellow Vein Mosaic Virus"
+      display_name: "Yellow Vein Mosaic Virus"
+      scientific_name: "Bhendi yellow vein mosaic virus"
+      severity: "high"
+
+cabbage:
+  key: "cabbage"
+  common_name: "Cabbage"
+  display_name_en: "Cabbage"
+  display_name_ta: "முட்டைக்கோஸ்"
+  scientific_name: "Brassica oleracea var. capitata"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Brassica oleracea — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "HEAD_FORMATION"
+      display_name: "Head Formation"
+  symptoms:
+    - "V-shaped leaf margin lesions"
+    - "Black rot veins"
+    - "Downy mildew"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Black Rot"
+      display_name: "Black Rot"
+      scientific_name: "Xanthomonas campestris pv. campestris"
+      severity: "high"
+
+cauliflower:
+  key: "cauliflower"
+  common_name: "Cauliflower"
+  display_name_en: "Cauliflower"
+  display_name_ta: "காலிஃபிளவர்"
+  scientific_name: "Brassica oleracea var. botrytis"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Brassica oleracea var. botrytis — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "CURD_INITIATION"
+      display_name: "Curd Initiation"
+  symptoms:
+    - "Curd browning / rot"
+    - "Downy mildew patches"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Black Rot"
+      display_name: "Black Rot"
+
+cucumber:
+  key: "cucumber"
+  common_name: "Cucumber"
+  display_name_en: "Cucumber"
+  display_name_ta: "வெள்ளரிக்காய்"
+  scientific_name: "Cucumis sativus"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Cucumis sativus — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Angular leaf spots"
+    - "Powdery mildew coating"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Downy Mildew"
+      display_name: "Downy Mildew"
+      scientific_name: "Pseudoperonospora cubensis"
+
+bitter_gourd:
+  key: "bitter_gourd"
+  common_name: "Bitter Gourd"
+  display_name_en: "Bitter Gourd"
+  display_name_ta: "பாகற்காய்"
+  scientific_name: "Momordica charantia"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Momordica charantia — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Mosaic leaves"
+    - "Fruit fly lesions"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Mosaic Virus"
+      display_name: "Cucumber Mosaic Virus"
+
+bottle_gourd:
+  key: "bottle_gourd"
+  common_name: "Bottle Gourd"
+  display_name_en: "Bottle Gourd"
+  display_name_ta: "சுரைக்காய்"
+  scientific_name: "Lagenaria siceraria"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Lagenaria siceraria — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Powdery spots"
+    - "Fruit rot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+ridge_gourd:
+  key: "ridge_gourd"
+  common_name: "Ridge Gourd"
+  display_name_en: "Ridge Gourd"
+  display_name_ta: "பீர்க்கங்காய்"
+  scientific_name: "Luffa acutangula"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Luffa acutangula — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Yellowing leaves"
+    - "Downy spots"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+beans:
+  key: "beans"
+  common_name: "Beans"
+  display_name_en: "Beans"
+  display_name_ta: "அவரைக்காய்"
+  scientific_name: "Phaseolus vulgaris"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Phaseolus vulgaris — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "POD_FORMATION"
+      display_name: "Pod Formation"
+  symptoms:
+    - "Rust pustules"
+    - "Anthracnose dark spots"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Bean Rust"
+      display_name: "Bean Rust"
+      scientific_name: "Uromyces appendiculatus"
+
+peas:
+  key: "peas"
+  common_name: "Peas"
+  display_name_en: "Peas"
+  display_name_ta: "பட்டாணி"
+  scientific_name: "Pisum sativum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Pisum sativum — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "POD_FORMATION"
+      display_name: "Pod Formation"
+  symptoms:
+    - "Powdery coating"
+    - "Ascochyta spots"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+spinach:
+  key: "spinach"
+  common_name: "Spinach"
+  display_name_en: "Spinach"
+  display_name_ta: "பசலைக்கீரை"
+  scientific_name: "Spinacia oleracea"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Spinacia oleracea — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+  symptoms:
+    - "Blue mold / downy patches"
+    - "Leaf yellowing"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+capsicum:
+  key: "capsicum"
+  common_name: "Capsicum / Bell Pepper"
+  display_name_en: "Capsicum"
+  display_name_ta: "குடைமிளகாய்"
+  scientific_name: "Capsicum annuum var. grossum"
+  category: "vegetables"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Capsicum annuum — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Bacterial spot lesions"
+    - "Fruit blossom end rot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Bacterial Spot"
+      display_name: "Bacterial Spot"
+
+
+# ==============================================================================
+# FRUITS
+# ==============================================================================
+
+mango:
+  key: "mango"
+  common_name: "Mango"
+  display_name_en: "Mango"
+  display_name_ta: "மாம்பழம்"
+  scientific_name: "Mangifera indica"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Mangifera indica — Supported via AI visual assessment and ICAR/TNAU evidence."
+  is_active: true
+  stages:
+    - key: "FLOWERING"
+      display_name: "Flowering / Flushing"
+    - key: "FRUIT_SET"
+      display_name: "Fruit Set"
+    - key: "HARVEST"
+      display_name: "Harvest"
+  symptoms:
+    - "Black spot lesions on leaves and fruit"
+    - "Powdery white bloom on flowers"
+    - "Dieback of twigs"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Anthracnose"
+      display_name: "Mango Anthracnose"
+      scientific_name: "Colletotrichum gloeosporioides"
+      severity: "high"
+    - key: "Powdery Mildew"
+      display_name: "Mango Powdery Mildew"
+      scientific_name: "Oidium mangiferae"
+      severity: "moderate"
+
+banana:
+  key: "banana"
+  common_name: "Banana"
+  display_name_en: "Banana"
+  display_name_ta: "வாழை"
+  scientific_name: "Musa acuminata"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Musa acuminata — Supported via AI visual assessment and evidence review."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FLOWERING"
+      display_name: "Shooting / Flowering"
+    - key: "BUNCHING"
+      display_name: "Bunch Development"
+  symptoms:
+    - "Dark streaks on leaves (Sigatoka)"
+    - "Vascular browning & leaf wilting (Panama Wilt)"
+    - "Bunchy top rosette leaves"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Sigatoka Leaf Spot"
+      display_name: "Black Sigatoka"
+      scientific_name: "Mycosphaerella fijiensis"
+      severity: "high"
+    - key: "Panama Wilt"
+      display_name: "Panama Wilt (Fusarium)"
+      scientific_name: "Fusarium oxysporum f. sp. cubense"
+      severity: "high"
+
+papaya:
+  key: "papaya"
+  common_name: "Papaya"
+  display_name_en: "Papaya"
+  display_name_ta: "பப்பாளி"
+  scientific_name: "Carica papaya"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Carica papaya — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Ring spots on fruit and leaves"
+    - "Foot rot / Stem rot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Papaya Ring Spot Virus"
+      display_name: "Papaya Ring Spot Virus"
+      scientific_name: "Papaya ringspot virus"
+
+guava:
+  key: "guava"
+  common_name: "Guava"
+  display_name_en: "Guava"
+  display_name_ta: "கொய்யா"
+  scientific_name: "Psidium guajava"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Psidium guajava — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Guava wilt (yellowing & death)"
+    - "Fruit canker"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Guava Wilt"
+      display_name: "Guava Wilt Disease"
+
+citrus:
+  key: "citrus"
+  common_name: "Citrus / Lemon"
+  display_name_en: "Citrus"
+  display_name_ta: "எலுமிச்சை"
+  scientific_name: "Citrus limon"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Citrus limon — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Raised corky lesions (Citrus Canker)"
+    - "Yellowing leaves & dieback (Greening)"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Citrus Canker"
+      display_name: "Citrus Canker"
+      scientific_name: "Xanthomonas citri"
+
+grapes:
+  key: "grapes"
+  common_name: "Grapes"
+  display_name_en: "Grapes"
+  display_name_ta: "திராட்சை"
+  scientific_name: "Vitis vinifera"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Vitis vinifera — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Yellow oil spots on leaves"
+    - "White ash powdery growth"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Downy Mildew"
+      display_name: "Grape Downy Mildew"
+      scientific_name: "Plasmopara viticola"
+
+pomegranate:
+  key: "pomegranate"
+  common_name: "Pomegranate"
+  display_name_en: "Pomegranate"
+  display_name_ta: "மாதுளை"
+  scientific_name: "Punica granatum"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Punica granatum — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Bacterial oily spots on leaves & fruit"
+    - "Fruit cracking"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Bacterial Blight"
+      display_name: "Bacterial Blight (Teliya)"
+      scientific_name: "Xanthomonas axonopodis pv. punicae"
+
+apple:
+  key: "apple"
+  common_name: "Apple"
+  display_name_en: "Apple"
+  display_name_ta: "ஆப்பிள்"
+  scientific_name: "Malus domestica"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Malus domestica — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Velvety brown spots (Apple Scab)"
+    - "Cedar apple rust spots"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Apple Scab"
+      display_name: "Apple Scab"
+      scientific_name: "Venturia inaequalis"
+
+jackfruit:
+  key: "jackfruit"
+  common_name: "Jackfruit"
+  display_name_en: "Jackfruit"
+  display_name_ta: "பலாப்பழம்"
+  scientific_name: "Artocarpus heterophyllus"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Artocarpus heterophyllus — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Fruit rot / Rhizopus rot"
+    - "Leaf spot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+sapota:
+  key: "sapota"
+  common_name: "Sapota / Chikoo"
+  display_name_en: "Sapota"
+  display_name_ta: "சப்போட்டா"
+  scientific_name: "Manilkara zapota"
+  category: "fruits"
+  supported_status: "active"
+  disease_knowledge_status: "curated"
+  vision_support_status: "knowledge_review"
+  description: "Manilkara zapota — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "FRUITING"
+      display_name: "Fruiting"
+  symptoms:
+    - "Leaf spot (Phaeophleospora)"
+    - "Sooty mold"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+
+
+# ==============================================================================
+# SPICES & PLANTATION
+# ==============================================================================
+
+ginger:
+  key: "ginger"
+  common_name: "Ginger"
+  display_name_en: "Ginger"
+  display_name_ta: "இஞ்சி"
+  scientific_name: "Zingiber officinale"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Zingiber officinale — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "RHIZOME_MATURATION"
+      display_name: "Rhizome Maturation"
+  symptoms:
+    - "Rhizome rot / Soft rot"
+    - "Yellowing leaves"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Soft Rot"
+      display_name: "Soft Rot / Rhizome Rot"
+      scientific_name: "Pythium aphanidermatum"
+
+turmeric:
+  key: "turmeric"
+  common_name: "Turmeric"
+  display_name_en: "Turmeric"
+  display_name_ta: "மஞ்சள்"
+  scientific_name: "Curcuma longa"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Curcuma longa — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "RHIZOME_MATURATION"
+      display_name: "Rhizome Maturation"
+  symptoms:
+    - "Leaf blotch (Taphrina)"
+    - "Leaf spot (Colletotrichum)"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Leaf Blotch"
+      display_name: "Leaf Blotch"
+      scientific_name: "Taphrina maculans"
+
+black_pepper:
+  key: "black_pepper"
+  common_name: "Black Pepper"
+  display_name_en: "Black Pepper"
+  display_name_ta: "மிளகு"
+  scientific_name: "Piper nigrum"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Piper nigrum — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "BERRY_DEVELOPMENT"
+      display_name: "Berry Development"
+  symptoms:
+    - "Quick wilt (Phytophthora)"
+    - "Slow decline"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Quick Wilt"
+      display_name: "Quick Wilt Disease"
+      scientific_name: "Phytophthora capsici"
+
+cardamom:
+  key: "cardamom"
+  common_name: "Cardamom"
+  display_name_en: "Cardamom"
+  display_name_ta: "ஏலக்காய்"
+  scientific_name: "Elettaria cardamomum"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Elettaria cardamomum — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "VEGETATIVE"
+      display_name: "Vegetative"
+    - key: "CAPSULE_DEVELOPMENT"
+      display_name: "Capsule Development"
+  symptoms:
+    - "Katte disease (Mosaic virus)"
+    - "Capsule rot"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Katte Disease"
+      display_name: "Katte Mosaic Disease"
+
+coconut:
+  key: "coconut"
+  common_name: "Coconut"
+  display_name_en: "Coconut"
+  display_name_ta: "தென்னை"
+  scientific_name: "Cocos nucifera"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Cocos nucifera — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "BEARING"
+      display_name: "Bearing / Harvesting"
+  symptoms:
+    - "Bud rot"
+    - "Tanjore wilt / Stem bleeding"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Bud Rot"
+      display_name: "Bud Rot"
+      scientific_name: "Phytophthora palmivora"
+
+arecanut:
+  key: "arecanut"
+  common_name: "Arecanut / Betel Nut"
+  display_name_en: "Arecanut"
+  display_name_ta: "பாக்கு"
+  scientific_name: "Areca catechu"
+  category: "spices_plantation"
+  supported_status: "active"
+  disease_knowledge_status: "verified"
+  vision_support_status: "knowledge_review"
+  description: "Areca catechu — Supported via AI visual assessment."
+  is_active: true
+  stages:
+    - key: "BEARING"
+      display_name: "Bearing"
+  symptoms:
+    - "Kole roga / Fruit rot"
+    - "Yellow leaf disease"
+  disease_classes:
+    - key: "Healthy"
+      display_name: "Healthy"
+    - key: "Fruit Rot"
+      display_name: "Kole Roga (Fruit Rot)"
+      scientific_name: "Phytophthora meadii"

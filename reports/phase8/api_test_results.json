@@ -1,0 +1,105 @@
+{
+  "total_endpoints": 13,
+  "results": [
+    {
+      "endpoint": "GET /api/health",
+      "status_code": 200,
+      "latency_ms": 27.31,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/model-status",
+      "status_code": 200,
+      "latency_ms": 5.36,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/crops",
+      "status_code": 200,
+      "latency_ms": 14.43,
+      "passed": true
+    },
+    {
+      "endpoint": "POST /api/predict",
+      "status_code": 200,
+      "latency_ms": 64.97,
+      "passed": true,
+      "sample_output": {
+        "predicted_class": "Healthy",
+        "confidence": 0.9998,
+        "top_predictions": [
+          {
+            "class": "Healthy",
+            "confidence": 0.9998
+          },
+          {
+            "class": "Late_Blight",
+            "confidence": 0.0002
+          },
+          {
+            "class": "Early_Blight",
+            "confidence": 0.0
+          }
+        ],
+        "model_version": "tomato-v1",
+        "inference_time_ms": 28.81,
+        "is_demo_mode": false,
+        "needs_expert_review": false
+      }
+    },
+    {
+      "endpoint": "POST /api/observations",
+      "status_code": 201,
+      "latency_ms": 90.16,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/observations",
+      "status_code": 200,
+      "latency_ms": 30.75,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/observations/{id}",
+      "status_code": 200,
+      "latency_ms": 14.45,
+      "passed": true
+    },
+    {
+      "endpoint": "POST /api/observations/{id}/escalate",
+      "status_code": 200,
+      "latency_ms": 25.23,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/expert/dashboard/stats",
+      "status_code": 200,
+      "latency_ms": 14.01,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/expert/reviews",
+      "status_code": 200,
+      "latency_ms": 33.14,
+      "passed": true
+    },
+    {
+      "endpoint": "GET /api/expert/reviews/{id}",
+      "status_code": 200,
+      "latency_ms": 26.76,
+      "passed": true
+    },
+    {
+      "endpoint": "POST /api/expert/reviews/{id}/complete",
+      "status_code": 200,
+      "latency_ms": 17.76,
+      "passed": true
+    },
+    {
+      "endpoint": "POST /api/expert/reviews/{id}/request-info",
+      "status_code": 200,
+      "latency_ms": 23.51,
+      "passed": true
+    }
+  ]
+}

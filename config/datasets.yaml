@@ -1,0 +1,231 @@
+# HortiSentry Multi-Crop Dataset Source Registry
+# Tracks metadata, licensing, source provenance, and download/preparation status for all agricultural datasets.
+
+datasets:
+  - dataset_id: "plantvillage_tomato"
+    dataset_name: "PlantVillage Tomato Leaf Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "tomato"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 6271
+    classes:
+      - "Healthy"
+      - "Early_Blight"
+      - "Late_Blight"
+      - "Septoria_Leaf_Spot"
+    download_status: "downloaded"
+    preparation_status: "verified"
+    notes: "Baseline HortiSentry tomato dataset. Ingested and split in Phase 6. Must remain unmodified."
+
+  - dataset_id: "plantvillage_potato"
+    dataset_name: "PlantVillage Potato Foliage Disease Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "potato"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 2152
+    classes:
+      - "Potato_Early_Blight"
+      - "Potato_Late_Blight"
+      - "Potato_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/potato/."
+
+  - dataset_id: "plantvillage_pepper"
+    dataset_name: "PlantVillage Bell Pepper Disease Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "pepper"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 2475
+    classes:
+      - "Pepper_Bacterial_Spot"
+      - "Pepper_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/pepper/."
+
+  - dataset_id: "plantvillage_apple"
+    dataset_name: "PlantVillage Apple Foliage Pathogen Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "apple"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 3171
+    classes:
+      - "Apple_Scab"
+      - "Apple_Black_Rot"
+      - "Apple_Cedar_Rust"
+      - "Apple_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/apple/."
+
+  - dataset_id: "plantvillage_grape"
+    dataset_name: "PlantVillage Grape Foliage Disease Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "grape"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 4062
+    classes:
+      - "Grape_Black_Rot"
+      - "Grape_Black_Measles"
+      - "Grape_Leaf_Blight"
+      - "Grape_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/grape/."
+
+  - dataset_id: "plantvillage_corn"
+    dataset_name: "PlantVillage Corn (Maize) Leaf Blight & Rust Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "corn"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 3852
+    classes:
+      - "Corn_Gray_Leaf_Spot"
+      - "Corn_Common_Rust"
+      - "Corn_Northern_Leaf_Blight"
+      - "Corn_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/corn/."
+
+  - dataset_id: "plantvillage_cherry"
+    dataset_name: "PlantVillage Cherry Foliage Disease Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "cherry"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 1783
+    classes:
+      - "Cherry_Powdery_Mildew"
+      - "Cherry_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/cherry/."
+
+  - dataset_id: "plantvillage_peach"
+    dataset_name: "PlantVillage Peach Bacterial Spot & Healthy Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "peach"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 2657
+    classes:
+      - "Peach_Bacterial_Spot"
+      - "Peach_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/peach/."
+
+  - dataset_id: "plantvillage_strawberry"
+    dataset_name: "PlantVillage Strawberry Leaf Scorch Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "strawberry"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 1565
+    classes:
+      - "Strawberry_Leaf_Scorch"
+      - "Strawberry_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/strawberry/."
+
+  - dataset_id: "plantvillage_citrus"
+    dataset_name: "PlantVillage Citrus Greening (Huanglongbing) Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "orange"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 5507
+    classes:
+      - "Citrus_Huanglongbing"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/orange/."
+
+  - dataset_id: "plantvillage_blueberry"
+    dataset_name: "PlantVillage Blueberry Healthy Foliage Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "blueberry"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 1502
+    classes:
+      - "Blueberry_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/blueberry/."
+
+  - dataset_id: "plantvillage_squash"
+    dataset_name: "PlantVillage Squash Powdery Mildew Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "squash"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 1835
+    classes:
+      - "Squash_Powdery_Mildew"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/squash/."
+
+  - dataset_id: "plantvillage_raspberry"
+    dataset_name: "PlantVillage Raspberry Healthy Foliage Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "raspberry"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 371
+    classes:
+      - "Raspberry_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/raspberry/."
+
+  - dataset_id: "plantvillage_soybean"
+    dataset_name: "PlantVillage Soybean Healthy Foliage Dataset"
+    source: "PlantVillage Open Research Repository"
+    source_url: "https://github.com/spMohanty/PlantVillage-Dataset"
+    license: "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
+    crop: "soybean"
+    image_type: "studio_foliage"
+    real_or_synthetic: "real"
+    number_of_images: 5090
+    classes:
+      - "Soybean_Healthy"
+    download_status: "downloaded"
+    preparation_status: "prepared"
+    notes: "Ingested under data/raw/multi_crop/soybean/."

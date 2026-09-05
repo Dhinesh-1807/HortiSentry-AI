@@ -1,0 +1,34 @@
+{
+  "total_images": 755,
+  "crops_count": 13,
+  "crops": [
+    "apple",
+    "blueberry",
+    "cherry",
+    "corn",
+    "grape",
+    "orange",
+    "peach",
+    "pepper",
+    "potato",
+    "raspberry",
+    "soybean",
+    "squash",
+    "strawberry"
+  ],
+  "total_classes": 28,
+  "quality_distribution": {
+    "GOOD": 755,
+    "WARNING": 0,
+    "REJECT": 0
+  },
+  "split_distribution": {
+    "train": 520,
+    "validation": 95,
+    "test": 140
+  },
+  "exact_duplicate_groups": 0,
+  "corrupted_files_count": 0,
+  "unsupported_files_count": 0,
+  "readiness_status": "PREPARED_FOR_MULTI_CROP"
+}

@@ -1,0 +1,61 @@
+# HortiSentry Centralized Class Configuration
+# Standard disease classes and class directory alias mappings per crop.
+
+tomato:
+  key: "tomato"
+  display_name: "Tomato"
+  classes:
+    - "Healthy"
+    - "Early_Blight"
+    - "Late_Blight"
+    - "Septoria_Leaf_Spot"
+  aliases:
+    "Healthy": "Healthy"
+    "healthy": "Healthy"
+    "Healthy_Leaf": "Healthy"
+    "Early_Blight": "Early_Blight"
+    "Early_blight": "Early_Blight"
+    "Alternaria_solani": "Early_Blight"
+    "Late_Blight": "Late_Blight"
+    "Late_blight": "Late_Blight"
+    "Phytophthora_infestans": "Late_Blight"
+    "Septoria_Leaf_Spot": "Septoria_Leaf_Spot"
+    "Septoria_leaf_spot": "Septoria_Leaf_Spot"
+    "Leaf_Spot": "Septoria_Leaf_Spot"
+    "Leaf_spot": "Septoria_Leaf_Spot"
+    "Septoria_lycopersici": "Septoria_Leaf_Spot"
+
+# Extensible placeholder crops for future releases
+chilli:
+  key: "chilli"
+  display_name: "Chilli / Pepper"
+  classes:
+    - "Healthy"
+    - "Chilli_Leaf_Curl"
+    - "Anthracnose"
+  aliases:
+    "Healthy": "Healthy"
+    "Chilli_Leaf_Curl": "Chilli_Leaf_Curl"
+    "Anthracnose": "Anthracnose"
+
+brinjal:
+  key: "brinjal"
+  display_name: "Brinjal / Eggplant"
+  classes:
+    - "Healthy"
+    - "Little_Leaf"
+  aliases:
+    "Healthy": "Healthy"
+    "Little_Leaf": "Little_Leaf"
+
+potato:
+  key: "potato"
+  display_name: "Potato"
+  classes:
+    - "Healthy"
+    - "Early_Blight"
+    - "Late_Blight"
+  aliases:
+    "Healthy": "Healthy"
+    "Early_Blight": "Early_Blight"
+    "Late_Blight": "Late_Blight"

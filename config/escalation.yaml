@@ -1,0 +1,39 @@
+# HortiSentry Escalation Engine Configuration
+# Configurable thresholds and business rules for AI confidence, risk levels, and expert escalation
+
+confidence_thresholds:
+  high_confidence: 0.85      # confidence >= 0.85 -> Normal observation (if low/normal risk)
+  review_recommended: 0.60   # 0.60 <= confidence < 0.85 -> Expert review recommended
+  low_confidence: 0.60       # confidence < 0.60 -> Expert review required
+
+risk_levels:
+  high_risk_diseases:
+    - "Late_Blight"
+    - "Tomato_Late_Blight"
+    - "Potato_Late_Blight"
+    - "Bacterial_Spot"
+    - "Tomato_Bacterial_Spot"
+    - "Anthracnose"
+    - "Wilt"
+    - "Fruit_Rot"
+    - "Tomato_Mosaic_Virus"
+    - "Chilli_Leaf_Curl"
+  medium_risk_diseases:
+    - "Early_Blight"
+    - "Tomato_Early_Blight"
+    - "Potato_Early_Blight"
+    - "Septoria_Leaf_Spot"
+    - "Tomato_Target_Spot"
+    - "Leaf_Spot"
+  low_risk_diseases:
+    - "Healthy"
+    - "Powdery_Mildew"
+
+quality_escalation:
+  escalate_on_blur: true
+  escalate_on_exposure: true
+  escalate_on_unknown_symptom: true
+
+kpi_targets:
+  target_review_time_hours: 6.0       # Target turnaround time for expert review
+  baseline_review_time_hours: 48.0     # Baseline manual cooperative turnaround time (hours)

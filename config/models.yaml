@@ -1,0 +1,154 @@
+# HortiSentry Model Registry & Provider Configuration
+# Manages AI Vision Providers, Model Checkpoint References, and Model Readiness Statuses.
+
+version: "1.0"
+
+models:
+  # --- DEDICATED TRAINED MODEL (STATE A) ---
+  tomato-v1:
+    crop: "tomato"
+    provider: "pytorch"
+    architecture: "MobileNetV3 Small"
+    checkpoint: "ml/artifacts/tomato_v1.pt"
+    classes: 4
+    class_names:
+      - "Healthy"
+      - "Early_Blight"
+      - "Late_Blight"
+      - "Septoria_Leaf_Spot"
+    test_accuracy: 0.9937
+    macro_f1: 0.9927
+    status: "production_benchmark"
+    dedicated_model_active: true
+    evidence_review_enabled: true
+
+  # --- MULTIMODAL VISUAL ASSESSMENT + AI EVIDENCE ENGINE (STATE B) ---
+  potato:
+    crop: "potato"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 3
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  pepper:
+    crop: "pepper"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 2
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  apple:
+    crop: "apple"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 4
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  grape:
+    crop: "grape"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 4
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  corn:
+    crop: "corn"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 4
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  cherry:
+    crop: "cherry"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 2
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  peach:
+    crop: "peach"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 2
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  strawberry:
+    crop: "strawberry"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 2
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "YELLOW"
+
+  orange:
+    crop: "orange"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 1
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "RED"
+
+  blueberry:
+    crop: "blueberry"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 1
+    status: "knowledge_review_only"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "RED"
+
+  raspberry:
+    crop: "raspberry"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 1
+    status: "knowledge_review_only"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "RED"
+
+  soybean:
+    crop: "soybean"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 1
+    status: "knowledge_review_only"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "RED"
+
+  squash:
+    crop: "squash"
+    provider: "visual_assessment"
+    architecture: "Multimodal Visual Symptom Analyzer"
+    classes: 1
+    status: "data_expansion_required"
+    dedicated_model_active: false
+    evidence_review_enabled: true
+    readiness_tier: "RED"

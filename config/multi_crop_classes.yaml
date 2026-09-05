@@ -1,0 +1,207 @@
+# HortiSentry Multi-Crop Class Normalization & Taxonomy Registry
+# Maps original raw dataset labels to standardized canonical class names and biological disease types.
+
+class_mappings:
+  # --- TOMATO ---
+  - crop: "tomato"
+    canonical_class: "Healthy"
+    original_label: "Tomato___healthy"
+    disease_type: "healthy"
+
+  - crop: "tomato"
+    canonical_class: "Early_Blight"
+    original_label: "Tomato___Early_blight"
+    disease_type: "fungal"
+
+  - crop: "tomato"
+    canonical_class: "Late_Blight"
+    original_label: "Tomato___Late_blight"
+    disease_type: "fungal"
+
+  - crop: "tomato"
+    canonical_class: "Septoria_Leaf_Spot"
+    original_label: "Tomato___Septoria_leaf_spot"
+    disease_type: "fungal"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Bacterial_Spot"
+    original_label: "Tomato___Bacterial_spot"
+    disease_type: "bacterial"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Leaf_Mold"
+    original_label: "Tomato___Leaf_Mold"
+    disease_type: "fungal"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Spider_Mites"
+    original_label: "Tomato___Spider_mites Two-spotted_spider_mite"
+    disease_type: "pest"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Target_Spot"
+    original_label: "Tomato___Target_Spot"
+    disease_type: "fungal"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Yellow_Leaf_Curl_Virus"
+    original_label: "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+    disease_type: "viral"
+
+  - crop: "tomato"
+    canonical_class: "Tomato_Mosaic_Virus"
+    original_label: "Tomato___Tomato_mosaic_virus"
+    disease_type: "viral"
+
+  # --- POTATO ---
+  - crop: "potato"
+    canonical_class: "Potato_Early_Blight"
+    original_label: "Potato___Early_blight"
+    disease_type: "fungal"
+
+  - crop: "potato"
+    canonical_class: "Potato_Late_Blight"
+    original_label: "Potato___Late_blight"
+    disease_type: "fungal"
+
+  - crop: "potato"
+    canonical_class: "Potato_Healthy"
+    original_label: "Potato___healthy"
+    disease_type: "healthy"
+
+  # --- PEPPER (BELL) ---
+  - crop: "pepper"
+    canonical_class: "Pepper_Bacterial_Spot"
+    original_label: "Pepper,_bell___Bacterial_spot"
+    disease_type: "bacterial"
+
+  - crop: "pepper"
+    canonical_class: "Pepper_Healthy"
+    original_label: "Pepper,_bell___healthy"
+    disease_type: "healthy"
+
+  # --- APPLE ---
+  - crop: "apple"
+    canonical_class: "Apple_Scab"
+    original_label: "Apple___Apple_scab"
+    disease_type: "fungal"
+
+  - crop: "apple"
+    canonical_class: "Apple_Black_Rot"
+    original_label: "Apple___Black_rot"
+    disease_type: "fungal"
+
+  - crop: "apple"
+    canonical_class: "Apple_Cedar_Rust"
+    original_label: "Apple___Cedar_apple_rust"
+    disease_type: "fungal"
+
+  - crop: "apple"
+    canonical_class: "Apple_Healthy"
+    original_label: "Apple___healthy"
+    disease_type: "healthy"
+
+  # --- GRAPE ---
+  - crop: "grape"
+    canonical_class: "Grape_Black_Rot"
+    original_label: "Grape___Black_rot"
+    disease_type: "fungal"
+
+  - crop: "grape"
+    canonical_class: "Grape_Black_Measles"
+    original_label: "Grape___Esca_(Black_Measles)"
+    disease_type: "fungal"
+
+  - crop: "grape"
+    canonical_class: "Grape_Leaf_Blight"
+    original_label: "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)"
+    disease_type: "fungal"
+
+  - crop: "grape"
+    canonical_class: "Grape_Healthy"
+    original_label: "Grape___healthy"
+    disease_type: "healthy"
+
+  # --- CORN ---
+  - crop: "corn"
+    canonical_class: "Corn_Gray_Leaf_Spot"
+    original_label: "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot"
+    disease_type: "fungal"
+
+  - crop: "corn"
+    canonical_class: "Corn_Common_Rust"
+    original_label: "Corn_(maize)___Common_rust_"
+    disease_type: "fungal"
+
+  - crop: "corn"
+    canonical_class: "Corn_Northern_Leaf_Blight"
+    original_label: "Corn_(maize)___Northern_Leaf_Blight"
+    disease_type: "fungal"
+
+  - crop: "corn"
+    canonical_class: "Corn_Healthy"
+    original_label: "Corn_(maize)___healthy"
+    disease_type: "healthy"
+
+  # --- CHERRY ---
+  - crop: "cherry"
+    canonical_class: "Cherry_Powdery_Mildew"
+    original_label: "Cherry_(including_sour)___Powdery_mildew"
+    disease_type: "fungal"
+
+  - crop: "cherry"
+    canonical_class: "Cherry_Healthy"
+    original_label: "Cherry_(including_sour)___healthy"
+    disease_type: "healthy"
+
+  # --- PEACH ---
+  - crop: "peach"
+    canonical_class: "Peach_Bacterial_Spot"
+    original_label: "Peach___Bacterial_spot"
+    disease_type: "bacterial"
+
+  - crop: "peach"
+    canonical_class: "Peach_Healthy"
+    original_label: "Peach___healthy"
+    disease_type: "healthy"
+
+  # --- STRAWBERRY ---
+  - crop: "strawberry"
+    canonical_class: "Strawberry_Leaf_Scorch"
+    original_label: "Strawberry___Leaf_scorch"
+    disease_type: "fungal"
+
+  - crop: "strawberry"
+    canonical_class: "Strawberry_Healthy"
+    original_label: "Strawberry___healthy"
+    disease_type: "healthy"
+
+  # --- ORANGE / CITRUS ---
+  - crop: "orange"
+    canonical_class: "Citrus_Huanglongbing"
+    original_label: "Orange___Haunglongbing_(Citrus_greening)"
+    disease_type: "bacterial"
+
+  # --- BLUEBERRY ---
+  - crop: "blueberry"
+    canonical_class: "Blueberry_Healthy"
+    original_label: "Blueberry___healthy"
+    disease_type: "healthy"
+
+  # --- SQUASH ---
+  - crop: "squash"
+    canonical_class: "Squash_Powdery_Mildew"
+    original_label: "Squash___Powdery_mildew"
+    disease_type: "fungal"
+
+  # --- RASPBERRY ---
+  - crop: "raspberry"
+    canonical_class: "Raspberry_Healthy"
+    original_label: "Raspberry___healthy"
+    disease_type: "healthy"
+
+  # --- SOYBEAN ---
+  - crop: "soybean"
+    canonical_class: "Soybean_Healthy"
+    original_label: "Soybean___healthy"
+    disease_type: "healthy"

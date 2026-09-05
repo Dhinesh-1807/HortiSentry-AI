@@ -1,0 +1,4 @@
+canonical_class,total_images,train,validation,test,percentage
+Potato_Healthy,334,229,58,47,13.13%
+Potato_Early_Blight,1106,789,158,159,43.49%
+Potato_Late_Blight,1103,778,152,173,43.37%

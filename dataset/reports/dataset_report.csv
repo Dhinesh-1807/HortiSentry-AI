@@ -1,0 +1,9 @@
+Category,Item,Count,Percentage
+Split,train,4386,69.9%
+Split,test,947,15.1%
+Split,validation,938,15.0%
+Class,Early_Blight,1000,15.9%
+Class,Healthy,1591,25.4%
+Class,Late_Blight,1909,30.4%
+Class,Septoria_Leaf_Spot,1771,28.2%
+Crop,Tomato,6271,100.0%
