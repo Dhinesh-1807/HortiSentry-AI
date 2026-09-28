@@ -8,7 +8,7 @@
 
 ## 1. Executive System Overview
 
-HortiSentry is structured as a modular 3-tier web architecture designed for reliable agricultural observation collection, real-time computer vision inference, decision escalation, and human-in-the-loop expert review.
+HortiSentry is structured as a modular 3-tier web architecture designed for reliable agricultural observation collection, real-time computer vision inference, decision escalation, grounded evidence retrieval, and human-in-the-loop expert review.
 
 ```mermaid
 graph TD
@@ -21,14 +21,15 @@ graph TD
         API[FastAPI Gateway / Router]
         Quality[Image Quality Analyzer]
         Escalation[Decision Escalation Service]
+        Evidence[AI Evidence Review Engine]
         ORM[SQLAlchemy ORM]
     end
 
     subgraph Machine Learning Tier
         MLService[ML Safety Wrapper]
-        TorchPredictor[PyTorch TorchPredictor]
-        DemoPredictor[Fallback DemoPredictor]
-        Weights[Model Artifact / tomato_v1.pt]
+        TorchTomato[Tomato-v1 Predictor]
+        TorchPotato[Potato-v1 Predictor]
+        VisualAnalyzer[Visual Symptom Analyzer Provider]
     end
 
     subgraph Storage Tier
@@ -40,10 +41,11 @@ graph TD
     Expert -->|HTTP GET/POST Reviews| API
     API --> Quality
     API --> MLService
-    MLService --> TorchPredictor
-    TorchPredictor --> Weights
-    MLService -->|Fallback if missing| DemoPredictor
+    MLService -->|crop == tomato| TorchTomato
+    MLService -->|crop == potato| TorchPotato
+    MLService -->|crop == other| VisualAnalyzer
     API --> Escalation
+    API --> Evidence
     API --> ORM
     ORM --> DB
     Quality --> Uploads
@@ -58,19 +60,21 @@ graph TD
 - **Expert Dashboard:** Desktop reviewer portal providing cooperative agronomists with review queues, inspection tools, high-resolution image viewers, AI breakdown visualizations, and decision override/info-request controls.
 
 ### 2.2 Backend Core Tier (FastAPI + Pydantic)
-- **FastAPI Core (`backend/app/main.py`):** Asynchronous REST service serving crop metadata, observation submission endpoints, expert review workflows, and system health status.
+- **FastAPI Core (`backend/app/main.py`):** Asynchronous REST service serving multi-crop metadata, observation submission endpoints, expert review workflows, and system health status.
 - **Image Quality Engine (`backend/app/services/image_quality_service.py`):** Analyzes uploaded leaf imagery using OpenCV for blur variance (Laplacian transform), exposure thresholds, minimum resolution ($224 \times 224$), and aspect ratios.
 - **Decision Escalation Engine (`backend/app/services/escalation_service.py`):** Automatically routes observations to the expert review queue if:
   1. AI prediction confidence $< 0.70$ (`LOW_CONFIDENCE`).
   2. Image quality is flagged (`POOR_IMAGE_QUALITY`).
-  3. Farmer explicitly requests expert assistance (`MANUAL_FARMER_REQUEST`).
+  3. High-risk disease is detected (`HIGH_RISK_CONDITION`, e.g. Late Blight).
+  4. Farmer explicitly requests expert assistance (`MANUAL_FARMER_REQUEST`).
+- **AI Evidence Review Engine (`backend/app/services/evidence_engine.py`):** Fuses visual predictions with grounded agricultural evidence from ICAR and TNAU Agritech portals, delivering structured management guidance and source citations.
 
-### 2.3 Machine Learning Tier (PyTorch MobileNetV3 Small)
-- **ML Safety Wrapper (`backend/app/ml/predictor.py`):** Dynamic loader managing real PyTorch model execution vs fallback demo mode based on `ML_MODE` configuration and model artifact availability.
-- **TorchPredictor (`backend/app/ml/torch_predictor.py`):** Loads `ml/artifacts/tomato_v1.pt` model weights, executing deterministic preprocessing and softmax classification.
+### 2.3 Machine Learning Tier (Multi-Crop MobileNetV3 Small)
+- **ML Safety Wrapper (`backend/app/ml/predictor.py`):** Dynamic router managing crop-specific PyTorch vision providers (`tomato-v1`, `potato-v1`) and falling back to visual assessment for unsupported crops.
+- **TorchPredictors (`backend/app/ml/torch_predictor.py`):** Loads production artifacts (`ml/artifacts/tomato_v1.pt`, `ml/artifacts/potato_v1.pt`), executing deterministic preprocessing and softmax classification.
 
 ### 2.4 Data Tier (SQLAlchemy + SQLite)
-- **SQLAlchemy Models (`backend/app/models/models.py`):** Relational schema preserving raw observations, image paths, AI predictions, escalation reasons, and authoritative expert review overrides in distinct database tables.
+- **SQLAlchemy Models (`backend/app/models/models.py`):** Relational schema preserving raw observations, image paths, AI predictions, escalation reasons, AI evidence reviews, and authoritative expert review overrides in distinct database tables.
 
 ---
 
@@ -79,18 +83,20 @@ graph TD
 ```mermaid
 stateDiagram-v2
     [*] --> SUBMITTED : Farmer Submits Observation & Leaf Photo
-    SUBMITTED --> COMPLETED : Confidence >= 0.70 & Quality Good
-    SUBMITTED --> PENDING_REVIEW : Confidence < 0.70 OR Poor Quality OR Manual Request
-    PENDING_REVIEW --> UNDER_REVIEW : Expert Opens Review Detail
-    UNDER_REVIEW --> COMPLETED : Expert Submits Diagnosis
-    UNDER_REVIEW --> NEEDS_INFO : Expert Requests Additional Info
-    NEEDS_INFO --> PENDING_REVIEW : Farmer Updates Photos/Details
+    SUBMITTED --> REVIEWED : Confidence >= 0.70 & Quality Good & Routine Condition
+    SUBMITTED --> EXPERT_REVIEW_REQUIRED : Confidence < 0.70 OR High-Risk Disease OR Poor Quality OR Manual Request
+    EXPERT_REVIEW_REQUIRED --> UNDER_REVIEW : Expert Opens Review Detail
+    UNDER_REVIEW --> REVIEWED : Expert Submits Diagnosis
+    UNDER_REVIEW --> MORE_INFORMATION_REQUIRED : Expert Requests Additional Info
+    MORE_INFORMATION_REQUIRED --> EXPERT_REVIEW_REQUIRED : Farmer Updates Photos/Details
 ```
 
 ---
 
-## 4. Security & Data Protection Architecture
+## 4. Stakeholder Trade-Off Architecture Alignment
 
-1. **Path Traversal Protection:** Image upload filenames are sanitized using UUID generation (`uuid4()`), stripping path separators to prevent arbitrary directory write vulnerabilities.
-2. **File Validation:** Uploads are checked against maximum file size limits ($10\text{MB}$), allowed extension lists (`.jpg`, `.jpeg`, `.png`, `.webp`), and PIL MIME header validation.
-3. **Database Decision Isolation:** Original AI predictions and Expert review decisions are stored in separate database tables (`predictions` vs `expert_reviews`), ensuring expert overrides never alter historical AI inference data.
+HortiSentry balances competing priorities across stakeholders:
+1. **Farmer Acceptance vs Cooperative Quality Assurance:** Simple 2-minute submission wizard + automated background metadata collection.
+2. **Fast Reporting vs Detailed Data Collection:** Visual leaf photo + symptom checkboxes enriched automatically by grounded ICAR/TNAU evidence retrieval.
+3. **High Sensitivity vs Expert Workload:** 0.70 engineering confidence threshold filters out high-confidence routine cases while escalating high-risk pathogens (*Late Blight*).
+4. **Automated AI Screening vs Human Verification:** AI acts strictly as advisory decision support; human agronomists retain binding review authority.
